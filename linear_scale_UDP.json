@@ -25,6 +25,7 @@
     }
   },
   "id": "linear_scale_UDP",
+  "returns": {"description": "A datacube.", "schema": {"type": "object", "subtype": "datacube"}},
   "parameters": [
     {
       "name": "input_datacube",
