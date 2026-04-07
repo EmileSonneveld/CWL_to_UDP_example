@@ -1,0 +1,37 @@
+{
+  "process_graph": {
+    "apply1": {
+      "arguments": {
+        "data": {"from_parameter": "input_datacube"},
+        "featureflags": {"allow_empty_cube": true},
+        "process": {
+          "process_graph": {
+            "linearscalerange1": {
+              "arguments": {
+                "inputMax": 2500,
+                "inputMin": 0,
+                "outputMax": 65534,
+                "outputMin": 0,
+                "x": {"from_parameter": "x"}
+              },
+              "process_id": "linear_scale_range",
+              "result": true
+            }
+          }
+        }
+      },
+      "process_id": "apply",
+      "result": true
+    }
+  },
+  "id": "linear_scale_UDP",
+  "parameters": [
+    {
+      "name": "input_datacube",
+      "description": "input_datacube",
+      "schema": {"type": "object", "subtype": "datacube"},
+      "optional": true,
+      "default": null
+    }
+  ]
+}
